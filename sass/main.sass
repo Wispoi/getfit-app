@@ -1,0 +1,899 @@
+@import vars
+@import fonts
+@import libs
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.87
+	font-family: 'Avenir Next Cyr', sans-serif
+	overflow-x: hidden
+	color: $text
+	width: 100%
+header, section
+	width: 100%
+
+a
+	text-decoration: none
+	&:hover
+		text-decoration: none
+ul,ol
+	padding: 0
+	margin: 0
+	list-style-type: none
+.section-wrapper
+	width: 100%
+	max-width: 1180px
+	margin: 0 auto
+	padding: 0 15px
+.header-mobile
+	display: none
+.header-wrapper
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	justify-content: space-between
+	width: 100%
+.header-nav
+	width: 100%
+	margin-left: 67px
+header
+	position: fixed
+	top: 0
+	left: 0
+	padding: 32px 0 31px 0
+	z-index: 99
+	transition: all .3s ease
+	.header-menu
+		display: none
+	.header-nav
+		justify-content: flex-end
+	&.scroll
+		background-color: #000
+		padding: 13px 0 12px 0
+		.header-menu
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+		.header-nav
+			justify-content: space-between
+.header-nav
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	justify-content: space-between
+
+.header-menu ul
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	justify-content: space-between
+	padding: 0
+	margin: 0
+	li
+		margin-right: 32px
+		a
+			font-size: 16px
+			color: #fff
+			line-height: 22px
+			font-family: 'Open Sans', sans-serif
+			transition: all .3s ease
+			&:hover
+				opacity: .6
+.header-login ul
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	justify-content: space-between
+	padding: 0
+	margin: 0
+	li
+		a
+			font-size: 16px
+			color: #fff
+			line-height: 22px
+			font-family: 'Avenir Next Cyr', sans-serif, sans-serif
+			transition: all .3s ease
+			&:hover
+				opacity: .6
+		&:first-child
+			a
+				color: #000
+				font-weight: 600
+				background-color: #fff
+				padding: 12px 27px 12px 27px
+				border-radius: 10px			
+				display: block	
+				&:hover
+					opacity: .8
+		&:nth-child(2)
+			padding: 12px 27px 12px 27px
+			white-space: nowrap
+			margin-left: 30px
+.hero
+	background: #F7F7F7
+	height: 1000px
+	overflow: hidden
+	width: 100%
+	position: relative
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	padding-top: 130px
+	justify-content: center
+	.hero-background
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		max-height: 800px
+		overflow: hidden
+		img
+			display: none
+		&:after
+			position: absolute
+			display: block
+			content: ''
+			width: 100%
+			height: 100%
+			z-index: 1
+			background: rgba(0, 0, 0, 0.6)
+			top: 0
+			left: 0
+		video
+			width: 100%
+			height: 100%
+			object-fit: cover
+.hero-wrapper
+	z-index: 1
+	position: relative
+.hero-title
+	color: #fff
+	font-size: 48px
+	line-height: 66px
+	text-align: center
+	font-weight: bold
+	max-width: 560px
+	margin: 0 auto 20px auto
+.hero-subtitle
+	color: #fff
+	text-align: center
+	margin-bottom: 50px
+.h3
+	font-weight: 600
+	font-size: 18px
+	line-height: 25px
+	font-family: 'Open Sans', sans-serif
+.mobile-label
+	display: none
+.btn-main
+	transition: all .3s ease
+	&:hover
+		opacity: .8
+.hero-tabs
+	height: 480px
+	max-width: 470px
+	background-color: rgba(255,255,255,.05)
+	border-radius: 10px
+	margin: 0 auto
+	padding: 20px
+.hero-tabs__nav
+	margin-bottom: 30px
+	ul
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		justify-content: space-between
+		li
+			padding: 17px 40px
+			border-radius: 10px
+			transition: all .3s ease
+			cursor: pointer
+			white-space: nowrap
+			span
+				color: #fff
+				transition: all .3s ease
+			&:hover
+				span
+					opacity: .6
+			&.active
+				background-color: rgba(255,255,255,.3)
+.hero-tabs__content
+	position: absolute
+	left: 50%
+	transform: translateX(-50%)
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: space-between
+.hero-tabs__item
+	background-color: #fff
+	padding: 40px 32px
+	box-shadow: 0px 40px 50px rgba(224, 224, 224, 0.3)
+	border-radius: 20px
+	width: 50%
+	min-width: 362px
+	&:first-child
+		margin-right: 15px
+		.hero-tabs__plan
+			background-color: $accent
+	&:nth-child(2)
+		margin-left: 15px
+
+		.hero-tabs__plan
+			background-color: $second
+			&:hover
+				background-color: #a8dc51
+				opacity: 1
+.hero-tabs__plan
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	justify-content: space-between
+	border-radius: 10px
+	padding: 16px 24px
+	position: relative
+	z-index: 1
+	transition: all .3s ease
+	&:hover
+		opacity: .8
+.hero-tabs__plan--title
+	color: #fff
+	opacity: .6
+	font-style: normal
+	font-weight: 600
+	font-size: 16px
+	line-height: 22px
+.hero-tabs__plan--price
+	color: #fff
+	font-size: 26px
+	line-height: 36px
+	font-weight: 600
+	.value
+		font-size: 26px
+		line-height: 36px
+	.duration
+		font-size: 14px
+		line-height: 19px
+.hero-tabs__plan--label
+	position: absolute
+	top: -25px
+	right: 0
+	color: #fff
+	padding: 6px 16px 10px 16px
+	background: #EB4054
+	border-radius: 10px 10px 0 0
+	z-index: 0
+	font-weight: 600
+	font-size: 12px
+	line-height: 16px
+	text-align: center
+	text-transform: uppercase
+	transition: all .3s ease
+.hero-tabs__plan--wrapper
+	position: relative
+	&:hover
+		.hero-tabs__plan--label
+			opacity: .8
+.why
+	padding-top: 76px
+	background: #F7F7F7
+.hero-tabs__icon
+	display: -webkit-inline-flex
+	display: -moz-inline-flex
+	display: -ms-inline-flex
+	display: -o-inline-flex
+	display: inline-flex
+	width: 70px
+	height: 70px
+	align-items: center
+	justify-content: center
+	background: #FFFFFF
+	border: 1px solid #EEEEEE
+	box-sizing: border-box
+	border-radius: 20px
+.hero-tabs__title
+	font-family: 'Avenir Next Cyr', sans-serif, sans-serif
+	font-style: normal
+	font-weight: 600
+	font-size: 26px
+	line-height: 36px
+	margin-top: 24px
+	color: #202020
+	margin-bottom: 8px
+	max-width: 258px
+.hero-tabs__description
+	font-family: 'Open Sans', sans-serif
+	font-style: normal
+	font-weight: normal
+	font-size: 14px
+	line-height: 24px
+	color: #202020
+	margin-bottom: 32px
+	min-height: 72px
+.hero-tabs__icons
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+.hero-tabs__plus
+	margin: 0 16px
+.duration-mobile
+	display: none
+.why-wrapper
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	position: relative
+	overflow: visible
+.why-images
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: flex-end
+	width: calc(50% + 30px)
+	position: absolute
+	right: -130px
+	z-index: 2
+.why-image
+	&:first-child
+		margin-right: 30px
+.h2
+	font-family: 'Avenir Next Cyr', sans-serif
+	font-style: normal
+	font-weight: bold
+	font-size: 44px
+	line-height: 60px
+	color: #202020
+	margin-bottom: 50px
+.why-content
+	width: calc(50% - 30px)
+	padding-bottom: 220px
+.why-list
+	ul
+		li
+			position: relative
+			padding-left: 50px
+			margin-bottom: 40px
+			&:before
+				content: ''
+				background-image: url(../img/check.svg)
+				display: block
+				position: absolute
+				left: 0
+				top: 5px
+				width: 20px
+				height: 14px
+				background-position: center
+				background-repeat: no-repeat
+				background-size: 100%
+.why-list__title
+	font-family: 'Avenir Next Cyr', sans-serif
+	font-style: normal
+	font-weight: 600
+	font-size: 18px
+	line-height: 25px
+	color: #202020
+	margin-bottom: 15px
+.why-list__description
+	font-family: 'Open Sans', sans-serif
+	font-style: normal
+	font-weight: normal
+	font-size: 16px
+	line-height: 30px
+	color: #202020
+.stories
+	position: relative
+	z-index: 0
+	padding-bottom: 120px
+	.slick-slide
+		margin: 0 15px
+	&:before
+		content: ''
+		position: absolute
+		top: -133px
+		background-color: #fff
+		border-radius: 20px 0 0 0
+		height: calc(100% + 133px)
+		right: 0
+		width: calc(100% + 20px)
+		max-width: 1665px
+		z-index: 0
+	.section-wrapper
+		z-index: 2
+		position: relative
+.stories-subtitle
+	max-width: 560px
+	margin-bottom: 138px
+	font-weight: normal
+	line-height: 32px
+.stories-item
+	position: relative
+	.stories-photo
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		overflow: hidden
+		position: relative
+		border-radius: 16px
+		.stories-before, .stories-after
+			width: 50%
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
+		&:before
+			position: absolute
+			top: 0
+			left: 0
+			height: 100%
+			width: 100%
+			content: ''
+			background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0.56%, rgba(0, 0, 0, 0.5) 99.82%)
+.stories-bottom
+	position: absolute
+	bottom: 0
+	padding: 28px 24px
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: space-between
+	align-items: center
+	width: 100%
+.stories-person__name
+	font-family: 'Avenir Next Cyr', sans-serif
+	font-style: normal
+	font-weight: 600
+	font-size: 18px
+	line-height: 25px
+	color: #FFFFFF
+.desktop-label
+	font-family: 'Avenir Next Cyr', sans-serif
+	font-style: normal
+	font-weight: normal
+	font-size: 10px
+	line-height: 14px
+	color: #FFFFFF
+.stories-person__place
+	font-family: 'Open Sans', sans-serif
+	font-style: normal
+	font-weight: normal
+	font-size: 14px
+	line-height: 30px
+	color: #FFFFFF
+.stories-success
+	background-color: $accent
+	color: #fff
+	border-radius: 8px
+	padding: 8px 12px
+	text-align: center
+	font-family: 'Avenir Next Cyr', sans-serif
+	font-style: normal
+	font-weight: normal
+	font-size: 10px
+	line-height: 14px
+	color: #FFFFFF
+	span
+		display: block
+		font-size: 26px
+		line-height: 34px
+		font-weight: bold
+		color: #fff
+.stories-inner
+	position: relative
+	overflow: hidden
+.stories
+	background-color: #F7F7F7
+	.slick-list
+		overflow: visible
+		margin-left: -15px
+	.slick-next, .slick-prev
+		top: -72px
+		opacity: 1
+		transition: all .3s ease
+		&:hover
+			opacity: .6
+	.slick-disabled
+		opacity: .2
+	.slick-prev
+		left: 0
+		&:before
+			content: ''
+			width: 42px
+			height: 13px
+			display: block
+			background-image: url(../img/arrow.svg)
+			transform: rotate(180deg)
+			opacity: 1
+	.slick-next
+		left: 64px
+		right: unset
+		&:before
+			content: ''
+			width: 42px
+			height: 13px
+			display: block
+			background-image: url(../img/arrow.svg)
+			opacity: 1
+.reviews
+	position: relative
+	z-index: 0
+	overflow: hidden
+	.slick-slide
+		margin: 15px 0
+	&:before
+		content: ''
+		position: absolute
+		background-color: #22343F
+		border-radius: 0 20px 20px 0
+		height: 100%
+		left: 0
+		width: calc(100% + 20px)
+		max-width: 1665px
+		z-index: 0
+	.section-wrapper
+		z-index: 2
+		position: relative	
+.reviews-wrapper
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	.slick-slide
+		opacity: .5
+		transition: all .3s ease
+		&.slick-current
+			opacity: 1
+	.reviews-rating
+		width: 50%
+	.reviews-slider
+		width: 50%
+	.hero-tabs__plan
+		background-color: $accent
+		max-width: 300px
+.reviews-rating__stars
+	img
+		max-width: 27px
+		margin-right: 7px
+.review-rating__value
+	font-family: 'Avenir Next Cyr', sans-serif
+	font-style: normal
+	font-weight: bold
+	font-size: 96px
+	line-height: 131px
+	color: #FFFFFF
+.review-rating__title
+	margin-top: 32px
+	font-family: 'Avenir Next Cyr', sans-serif
+	font-style: normal
+	font-weight: bold
+	font-size: 44px
+	line-height: 60px
+	color: #FFFFFF
+	margin-bottom: 16px
+.review-rating__subtitle
+	font-family: 'Avenir Next Cyr', sans-serif
+	font-style: normal
+	font-weight: 600
+	font-size: 18px
+	line-height: 25px
+	color: #FFFFFF
+	margin-bottom: 50px
+.reviews-item
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-direction: column
+	background-color: #fff
+	border-radius: 20px
+	padding: 40px
+.reviews-item__stars
+	margin-bottom: 24px
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	img
+		max-width: 17px
+		margin-right: 4px
+.reviews-item__text
+	font-family: 'Avenir Next Cyr', sans-serif
+	font-style: normal
+	font-weight: normal
+	font-size: 16px
+	line-height: 163.42%
+	color: #222222
+	margin-bottom: 24px
+.reviews-item__author
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+.reviews-item__author--name
+	font-family: 'Open Sans', sans-serif
+	font-style: normal
+	font-weight: normal
+	font-size: 12px
+	line-height: 32px
+	color: #202020
+	span
+		display: block
+		font-weight: bold
+		font-size: 16px
+		line-height: 22px
+.reviews-item__author--image
+	width: 56px
+	height: 56px
+	overflow: hidden
+	border-radius: 50%
+	margin-right: 18px
+	img
+		width: 100%
+		height: 100%
+		object-fit: cover
+.hero-tabs__plan--mobile
+	display: none
+.faq
+	position: relative
+	overflow: hidden
+.faq-wrapper
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: flex-end
+.faq-wrapper__questions
+	padding: 130px 0
+.accordion-item__title
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: space-between
+	align-items: center
+	font-family: 'Avenir Next Cyr', sans-serif
+	font-style: normal
+	font-weight: 600
+	font-size: 18px
+	line-height: 25px
+	color: #202020
+	cursor: pointer
+	transition: all .3s ease
+	img
+		transition: all .3s ease
+	&:hover
+		opacity: .6
+.accordion-item
+	border-bottom: 1px solid #E8E8E8
+	padding: 32px 0 8px 0
+	&.active
+		.accordion-item__content
+			max-height: 9999px
+			
+		.accordion-item__title
+			img
+				transform: rotate(180deg)
+	&:first-child
+		border-top: 1px solid #E8E8E8
+.accordion-item__content
+	margin-top: 24px
+	max-height: 0
+	overflow: hidden
+	font-family: 'Open Sans', sans-serif
+	font-style: normal
+	font-weight: normal
+	font-size: 16px
+	line-height: 30px
+	color: #202020
+	opacity: 0.5
+.faq-wrapper__questions
+	width: calc(60% + 70px)
+	margin-right: 70px
+.faq-wrapper__image
+	width: calc(40% - 70px)
+.download-wrapper
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	position: relative
+	z-index: 1
+	align-items: center
+.download-image
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: flex-end
+	img:first-child
+		margin-top: -44px
+		margin-right: 43px
+		margin-bottom: 75px
+	img
+		height: 100%
+.download
+	position: relative
+	&:before
+		content: ''
+		position: absolute
+		background-color: #F7F7F7
+		border-radius: 20px 0 0 20px
+		height: 100%
+		right: 0
+		width: calc(100% + 20px)
+		max-width: 1665px
+		z-index: 0
+.download-content
+	padding-left: 100px
+	.hero-tabs__plan--wrapper
+		max-width: 300px
+	.hero-tabs__plan
+		background: #92D326
+		&:hover
+			background-color: #a8dc51
+			opacity: 1
+	.hero-tabs__plan--label
+		right: unset
+		left: 0
+		z-index: -1
+.download-title
+	margin-bottom: 16px
+.download-subtitle
+	margin-bottom: 50px
+	font-weight: normal
+.footer-wrapper
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+.footer-col
+	width: 25%
+footer
+	padding: 100px 0
+	z-index: 99
+	background-color: #fff
+	position: relative
+.footer-copy
+	font-family: 'Open Sans', sans-serif
+	font-style: normal
+	font-weight: normal
+	font-size: 10px
+	line-height: 181.18%
+	color: #202020
+	opacity: 0.3
+	margin-top: 27px
+.footer-download__icon
+	margin-bottom: 14px
+	img
+		margin-right: 16px
+	font-family: 'Avenir Next Cyr', sans-serif
+	font-style: normal
+	font-weight: 600
+	font-size: 18px
+	line-height: 25px
+	color: #202020
+.footer-download__link
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+
+	a
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		opacity: .5
+		transition: all .3s ease
+		&:hover
+			opacity: 1
+		&:first-child
+			margin-left: 12px
+			margin-right: 18px
+			margin-top: -3px
+		img
+			width: 18px
+.footer-download
+	margin-bottom: 35px
+	&:last-child
+		margin-bottom: 0
+.footer-menu__title
+	font-family: 'Avenir Next Cyr', sans-serif
+	font-style: normal
+	font-weight: 600
+	font-size: 18px
+	line-height: 25px
+	color: #202020
+	margin-bottom: 30px
+.footer-menu__list
+	li
+		a
+			font-family: 'Open Sans', sans-serif
+			font-style: normal
+			font-weight: normal
+			font-size: 16px
+			line-height: 22px
+			color: #202020
+			opacity: 0.5
+			margin-bottom: 15px
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center
+			transition: all .3s ease
+			img
+				max-width: 22px
+				margin-right: 15px
+			&:hover
+				opacity: 1
+.slick-slider
+	cursor: grab
+@import media

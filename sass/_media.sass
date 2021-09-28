@@ -1,0 +1,635 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+@media only screen and (max-width : 1600px)
+	/**/
+@media only screen and (max-width : 1439px)
+	section
+		position: relative
+		overflow: hidden
+		&.stories, &.download
+			overflow: visible
+@media only screen and (max-width : 1199px)	
+	.download-image
+		width: 50%
+		img
+			width: 50%
+@media only screen and (max-width : 991px)
+	.faq-wrapper__image
+		display: none
+	.faq-wrapper__questions
+		width: 100%
+		margin: 0
+	.section-wrapper
+		padding: 0 20px
+	.header-wrapper
+		flex-wrap: wrap
+		.header-nav
+			order: 3
+			border-top: 1px solid transparent
+	.header-mobile
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		width: 40px 
+		height: 40px
+		align-items: center
+		justify-content: center
+	.burger-icon
+		height: 30px
+		width: 30px
+		overflow: hidden
+		span
+			display: block
+			width: 30px
+			height: 2px
+			background-color: #fff
+			transition: all .3s ease
+			&:nth-child(1)
+				margin-top: 6px
+			&:nth-child(2)
+				margin-top: 6px
+				opacity: 1
+			&:nth-child(3)
+				margin-top: 6px	
+	.header-nav
+		margin: 0
+		flex-direction: column
+		max-height: 0
+		transition: all .3s ease
+		overflow: hidden
+	header
+		padding: 10px 0 0 0!important
+		.section-wrapper
+			padding: 0
+		.header-logo
+			margin-left: 20px
+			margin-bottom: 10px
+			img
+				max-width: 75px
+		.header-mobile
+			margin-right: 20px
+			margin-bottom: 10px
+		.header-menu
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+	.header-menu
+		ul
+			flex-direction: column
+			text-align: center
+			li
+				margin: 0 0 16px 0
+				&:first-child
+					margin-top: 32px
+	.header-login
+		ul
+			flex-direction: column
+			li
+				margin-left: 0!important
+				margin-right: 0
+				&:first-child
+					margin-top: 8px
+					margin-bottom: 12px
+				&:last-child
+					margin-bottom: 12px
+	header.active
+		background-color: #000
+			display: flex
+		.header-nav
+			max-height: 999px
+			transition: all 1s ease
+			border-top: 1px solid #4a4a4a
+		.burger-icon
+			span
+				&:nth-child(1)
+					transform: rotate(45deg)
+					margin-top: 15px
+				&:nth-child(2)
+					margin-left: -100%	
+					opacity: 0	
+				&:nth-child(3)
+					transform: rotate(-45deg)
+					margin-top: -10px
+	.hero-title
+		font-size: 24px
+		max-width: 100%
+		line-height: 33px
+		margin-bottom: 8px
+	.h3
+		font-size: 14px
+		line-height: 19px
+		max-width: 100%
+		margin: 0 auto 40px auto
+	.hero 
+		height: 92.5vh
+		padding-top: 0
+		.section-wrapper
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center
+			justify-content: center
+		.hero-background
+			video
+				display: none
+			img
+				display: block
+				width: 100%
+				height: 100%
+				object-fit: cover
+	.footer-wrapper
+		flex-wrap: wrap
+		.footer-col
+			width: 50%
+	.hero-wrapper
+		min-height: 365px
+	.hero-tabs
+		max-width: 240px
+		padding: 8px
+	.hero-tabs__nav 
+		margin-bottom: 14px
+		ul li
+			border-radius: 10px
+			padding: 8px 10px 9px
+			font-size: 12px
+			line-height: 16px
+	.hero-tabs__content
+		flex-direction: column
+		width: 100vw
+	.hero-tabs__item
+		width: calc(100% - 40px)
+		min-width: unset
+		margin: 0 auto 8px auto!important
+		padding: 17px 20px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		border-radius: 10px
+		justify-content: space-between
+		&:first-child
+			background-color: $accent	
+			order: 2
+		&:last-child
+			background-color: $second
+		.hero-tabs__icons
+			display: none
+		.hero-tabs__title
+			margin: 0
+			color: #fff
+			font-size: 18px
+			line-height: 25px
+			max-width: 163px
+		.hero-tabs__description
+			display: none
+		.hero-tabs__plan
+			padding: 0
+			background-color: transparent!important
+		.hero-tabs__plan__arrow
+			display: none
+		.hero-tabs__plan--title
+			display: none
+		.hero-tabs__plan--price .duration
+			display: none
+		.duration-mobile
+			display: block
+			font-size: 12px
+			line-height: 16px
+			font-weight: normal
+		.hero-tabs__plan--price 
+			font-size: 18px
+			line-height: 25px
+			text-align: right
+			.value
+				font-size: 18px
+				line-height: 25px
+	.hero .hero-background:after
+		background: rgba(0,0,0,.7)
+	.hero .hero-background
+		max-height: 92.5vh
+	.hero-tabs__plan--label
+		white-space: nowrap
+		border-radius: 10px 10px 0 10px
+		padding: 3px 20px 3px 11px
+		font-size: 10px
+		line-height: 14px
+		font-weight: 600
+		right: -20px
+		top: -27px
+	.why
+		padding-top: 48px
+	.h2
+		font-size: 24px
+		line-height: 32px
+		text-align: center
+		margin-bottom: 24px
+		max-width: 100%
+		margin-left: auto
+		margin-right: auto
+
+	.why-wrapper
+		flex-direction: column
+		.slick-dots 
+			li
+				margin: 0
+				button
+					display: -webkit-flex
+					display: -moz-flex
+					display: -ms-flex
+					display: -o-flex
+					display: flex
+					align-items: center
+					justify-content: center
+					padding: 4px
+					&:before
+						width: 10px
+						height: 10px
+						line-height: 1.1
+						font-size: 10px
+						position: relative
+						color: #DEDEDE
+						opacity: 1
+				&.slick-active
+					button:before
+						color: $accent
+		.why-content
+			width: 100%
+			padding-bottom: 35px
+		.why-images
+			width: 100%
+	.why-list ul li
+		padding-left: 0
+		margin-bottom: 30px
+		&:before
+			display: none
+	.why-images
+		position: relative
+		right: unset
+		top: unset
+		z-index: 0
+		align-items: flex-start
+		.why-image:first-child
+			width: 45%
+			margin-right: 17px
+			margin-top: 15px
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			justify-content: center
+			img
+				width: 32vw
+				height: 100%
+		.why-image:last-child
+			width: 55%
+			img
+				max-width: 47.5vw
+		.why-image
+			img
+				max-width: 100%
+	.why-list__title
+		text-align: center
+		font-size: 14px
+		line-height: 19px
+	.why-list__description
+		font-size: 14px
+		line-height: 24px
+		text-align: center
+	.stories 
+		.slick-list
+			margin-left: 0
+		.slick-dots 
+			bottom: -40px
+			li
+				margin: 0
+				button
+					display: -webkit-flex
+					display: -moz-flex
+					display: -ms-flex
+					display: -o-flex
+					display: flex
+					align-items: center
+					justify-content: center
+					padding: 4px
+					&:before
+						width: 10px
+						height: 10px
+						line-height: 1.1
+						font-size: 10px
+						position: relative
+						color: #DEDEDE
+						opacity: 1
+				&.slick-active
+					button:before
+						color: $accent
+	.stories:before
+		top: -43px
+	section.stories
+		margin-top: -63px
+		padding-bottom: 48px
+	.stories-subtitle
+		text-align: center
+	.stories-title
+		margin-bottom: 16px
+	.stories .slick-slide
+		margin: 0 5px
+	.stories-person__name
+		font-size: 14px
+		line-height: 19px
+	.stories-person__place
+		font-size: 12px
+		line-height: 16px
+	.stories-bottom
+		padding: 15px
+	.stories-success
+		padding: 2px 12px 4px 12px
+	.mobile-label
+		display: block
+	.desktop-label
+		display: none
+	.stories-success span
+		font-size: 18px
+		line-height: 23px
+	.reviews-wrapper
+		flex-direction: column
+		padding: 40px 0 55px 0
+		.slick-track
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			.slick-slide
+				height: auto
+				& > div
+					height: 100%
+					.reviews-item
+						height: 100%
+						display: -webkit-flex!important
+						display: -moz-flex!important
+						display: -ms-flex!important
+						display: -o-flex!important
+						display: flex!important
+						flex-direction: column
+						justify-content: space-between
+		.slick-dots 
+			bottom: -50px
+			li
+				margin: 0
+				button
+					display: -webkit-flex
+					display: -moz-flex
+					display: -ms-flex
+					display: -o-flex
+					display: flex
+					align-items: center
+					justify-content: center
+					padding: 4px
+					&:before
+						width: 10px
+						height: 10px
+						line-height: 1.1
+						font-size: 10px
+						position: relative
+						color: #DEDEDE
+						opacity: 1
+				&.slick-active
+					button:before
+						color: $accent
+		.reviews-rating
+			width: 100%
+		.reviews-slider
+			width: 100%
+		.hero-tabs__plan
+			display: none
+	.review-rating__value
+		text-align: center
+		font-size: 48px
+		line-height: 66px
+		margin-bottom: 16px
+	.reviews-rating__stars
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		justify-content: center
+		margin-bottom: 16px
+		img
+			max-width: 15px
+			margin: 0 2px
+	.review-rating__title
+		margin-bottom: 4px
+	.review-rating__subtitle
+		text-align: center
+		margin-bottom: 32px
+	.reviews .section-wrapper
+		padding: 0
+	.reviews-wrapper .slick-slide
+		margin: 0 5px
+	.reviews-item
+		padding: 32px 24px
+	.reviews-item__text
+		font-size: 12px
+		line-height: 22px
+		margin-bottom: 18px
+	.reviews-item__author--name 
+		font-size: 10px
+		line-height: 14px
+		span
+			font-size: 12px
+			line-height: 16px
+	.reviews-item__author--image
+		width: 40px
+		height: 40px
+		margin-right: 12px
+	.reviews-item__stars
+		margin-bottom: 16px
+	.faq-wrapper__questions
+		padding-top: 48px
+		padding-bottom: 0
+	.faq
+		.section-wrapper
+			padding: 0
+		.faq-wrapper__title
+			padding: 0 20px
+		.accordion-item__title
+			font-size: 14px
+			line-height: 19px
+		.accordion-item__content
+			font-size: 12px
+			line-height: 24px
+			margin-top: 16px
+	.accordion-item
+		padding: 24px 20px 8px 20px
+	.accordion-item__title:hover
+		opacity: 1
+	.download-wrapper
+		flex-direction: column
+		overflow: hidden
+		.download-image
+			width: 100%
+			order: 2
+			align-items: flex-start
+		.download-content
+			width: 100%
+			padding: 0
+	.download
+		background: #F7F7F7
+		padding: 48px 0 0 0
+		&:before
+			display: none
+		.hero-tabs__plan--mobile
+			display: block
+			font-family: Avenir Next
+			font-style: normal
+			font-weight: 600
+			font-size: 18px
+			line-height: 25px
+			color: #FFFFFF
+			max-width: 163px
+		.hero-tabs__plan--title
+			display: none
+		.hero-tabs__plan__arrow
+			display: none
+		.hero-tabs__plan--price .duration
+			display: none
+		.duration-mobile
+			display: block
+			font-size: 12px
+			line-height: 16px
+			font-weight: normal
+		.hero-tabs__plan--price 
+			font-size: 18px
+			line-height: 25px
+			text-align: right
+			white-space: nowrap
+			.value
+				font-size: 18px
+				line-height: 25px
+	.download-image 
+		justify-content: space-between
+		max-height: 53vw
+		margin-top: 32px
+		img:first-child
+			margin-top: 0
+			margin-bottom: 0
+			margin-right: 0
+		img
+			width: calc(50% - 5px)
+	.download-title
+		margin-bottom: 16px
+	.download-subtitle
+		text-align: center
+		line-height: 24px
+		margin-bottom: 18px
+	.download-content .hero-tabs__plan--label
+		top: -12px
+		z-index: 2
+		left: unset
+		right: 0
+	.footer-wrapper 
+		.footer-col:first-child
+			width: 100%
+			margin-bottom: 30px
+		.footer-col:nth-child(2)
+			order: 4
+			width: 100%
+			margin-top: 22px			
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			justify-content: space-between
+	.footer-logo
+		img
+			max-width: 85px
+	.footer-copy
+		margin-top: 10px
+		font-size: 10px
+		line-height: 1.8
+	footer
+		padding: 40px 0
+	.footer-menu__title
+		font-size: 14px
+		line-height: 19px
+		margin-bottom: 16px
+	.footer-menu__list li a
+		font-size: 12px
+		line-height: 16px
+		margin-bottom: 12px
+	.footer-menu__list li a img
+		max-width: 18px
+		margin-right: 8px
+	.footer-download__icon img
+		max-width: 30px
+		margin-right: 9px
+	.footer-download__icon
+		align-items: center
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		margin-bottom: 7px
+	.footer-download__link
+		font-size: 10px
+		line-height: 14px
+		align-items: center
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+	.footer-download__link a:first-child
+		margin-left: 10px
+		margin-right: 13px
+	.footer-download__link a
+		margin-top: -4px
+	.footer-download
+		margin-bottom: 0
+		&:first-child
+			width: 60%
+		&:last-child
+			width: 40%
+	.footer-wrapper .footer-col:nth-child(3)
+		width: 60%
+	.footer-wrapper .footer-col:nth-child(4)
+		width: 40%		
+	.download-content .hero-tabs__plan--wrapper
+		margin: 0 auto
+	.stories .slick-next, .stories .slick-prev
+		display: none
+	.hero-tabs
+		height: auto
+@media only screen and (max-width : 767px)
+	.footer-wrapper
+		flex-wrap: wrap
+
+@media only screen and (max-width : 479px)
+	/**/
+/*==========  Mobile First  ==========*/
+
+@media only screen and (min-width : 480px)
+	/**/
+@media only screen and (min-width : 768px)
+	/**/
+@media only screen and (min-width : 992px)
+	/**/
+@media only screen and (min-width : 1200px)
+	/**/
+@media only screen and (min-width : 1440px)
+	.reviews:before,
+	.download:before,
+	.stories:before
+		max-width: calc(100vw - 20px)
